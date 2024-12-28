@@ -1,0 +1,414 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #080808;
+    color:white;
+}
+#header{
+    width:100%;
+    height:100vh;
+    background-size: 50%;
+    background-position:calc(100% - 50px) center;
+    background-repeat:no-repeat ;
+    position: relative;
+}
+.header-image {
+    width: 60%; /* Make the image responsive */
+    max-width: 400px; /* Optional: Limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Add border radius */
+    display: block; /* Remove any unwanted space around the image */
+    margin: 0 auto; /* Center the image horizontally */
+    margin-left: auto; /* Align image to the right */
+    margin-right: 0; /* Ensure no margin on the right */
+    position: absolute;
+    top:30%; /* Optional: Adjust the vertical position of the image */
+    right:80px; /* Optional: Adjust the horizontal position to the right */
+}
+
+
+.container{
+    padding:10px 10%;
+    
+}
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin:10px 20px
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    position:relative;
+}
+nav ul li a::after{
+    content:' ';
+    width:0;
+    height:3px;
+    background: #ff004f;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+    margin-top:20%;
+    font-size:30px;
+}
+.header-text h3{
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+#about{
+    padding:80 px,0;
+    color:#ababab;
+
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width:100%;
+    border-radius:15px;
+}
+.about-col-2{
+    flex-basis:60%;
+}
+
+.sub-title{
+    font size: 60px;
+    font weight:600;
+    color:white;
+    margin-bottom:20px;
+}
+
+.tab-titles{
+    display:flex;
+    margin:20px 0 40px;
+}
+.tab-links{
+    margin-right:50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor:pointer;
+    position:relative;
+}
+.tab-links::after{
+    content:' ';
+    width:0;
+    height:3px;
+    background:#ff004f;
+    position: absolute;
+    left:0;
+    bottom:-8px;
+    transition:0.5s;
+}
+.tab-links.active-link::after{
+    width:50%;
+
+}
+.tab-contents ul {
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-bottom: 10px; 
+    color:#ff004f;
+}
+
+ul li {
+    margin-bottom: 5px; 
+}
+.year-range{
+    color: #ff004f; 
+    font-weight: bold; 
+    margin-bottom:10px;
+    
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+    display:block;
+}
+
+#Projects{
+    padding:50px,0;
+}
+
+
+/* Contact Section Styling */
+#contact {
+    background-color:#080808;
+    padding: 60px 0;
+    
+}
+
+#contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    transform: translateX(0px);
+    padding-right: 84%;
+    margin-left: 120px;
+
+}
+
+.contact-left, .contact-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-left h1 {
+    font-size: 36px;
+    color: #fff;
+}
+
+.contact-left p, .contact-left p1 {
+    font-size: 18px;
+    color: #555;
+}
+
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input, #contact-form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+    background-color: #f2f2f2;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    background-color: #fff;
+    border-color: #007bff;
+}
+
+#contact-form button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
+#thank-you-message {
+    background-color: #e7f3ff;
+    padding: 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#thank-you-message h3 {
+    color: #333;
+}
+
+#thank-you-message p {
+    font-size: 16px;
+    color: #555;
+}
+
+#thank-you-message strong {
+    color: #007bff;
+}
+
+
+
+/* Resume Section Styling */
+#resume {
+    background-color: #080808;
+    color:white; /* Light background for the resume section */
+    padding: 60px 20px;
+    margin-left: 120px;
+    max-width: 1100px;
+}
+
+#resume .container {
+    text-align:left;
+    max-width: 1100px; /* Optional: You can adjust the width as needed */
+    margin: 0 auto;
+    padding:0 20px;
+    
+}
+
+#resume h1 {
+    font-size: 36px;
+    color:white;
+    margin-bottom: 10px;
+}
+
+#resume p {
+    font-size: 18px;
+    color:white;
+    margin-bottom: 30px;
+}
+
+#resume .btn {
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#resume .btn:hover {
+    background-color: #0056b3;
+}
+/* Default styles (for larger screens like laptops) */
+
+/* Styles for tablets and smaller laptops (768px to 1024px) */
+@media (max-width: 1024px) {
+
+    .container {
+        padding: 10px 5%; /* Reduce padding */
+    }
+
+    nav ul li {
+        margin: 10px 10px; /* Adjust spacing in nav */
+    }
+
+    .header-text {
+        font-size: 25px;
+    }
+
+    .header-text h3 {
+        font-size: 35px;
+    }
+
+    .about img {
+        width: 90%; /* Reduce image size */
+    }
+}
+
+/* Styles for mobile phones (max-width 767px) */
+@media (max-width: 767px) {
+    #resume {
+        padding-bottom: 10px; /* Reduce bottom padding */
+        margin-bottom: 0; /* Remove extra margin */
+    }
+
+    #contact {
+        padding-top: 10px; /* Reduce top padding */
+        margin-top: 0; /* Remove extra margin */
+    }
+    #resume .container {
+        padding: 0 20px; /* Add padding to the sides for smaller screens */
+        margin-left:-135px;
+        
+    }
+
+    #contact .container {
+        margin-left: -3px; /* Move "Contact Me" to the left in phone view */
+        padding: 0 10px; /* Optional: Adjust padding for better alignment */
+    }
+    nav {
+        flex-direction: column; /* Stack navigation links */
+        text-align: center;
+        justify-content: center; /* Center the navigation bar */
+        padding: 10px; /* Add padding to avoid items touching the edges */
+    }
+    nav ul {
+        flex-wrap: wrap; /* Allow wrapping if necessary (optional) */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Add spacing between nav items */
+        
+    }
+    nav ul li a {
+        font-size: 16px; /* Slightly smaller font for better fit */
+    }
+    
+   
+
+    .header-text {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .header-text h3 {
+        font-size: 30px;
+    }
+    .header-image {
+        margin-top: 80px; /* Adjust the value to move the image down */
+    }
+    
+    
+    
+    
+
+    .about img {
+        width: 100%; /* Full width image for mobile */
+    }
+
+    .row {
+        flex-direction: column; /* Stack columns */
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%; /* Make columns full width */
+    }
+
+    .tab-links {
+        margin-right: 10px; /* Adjust tab links */
+    }
+}
+
+@media (min-width: 1024px) {
+    #resume .container {
+        padding: 0 20px; /* Add padding for space on both sides */
+    }
+}
+        
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
